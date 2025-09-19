@@ -8,6 +8,7 @@ import accessoryRoutes from './routes/accessoryRoutes.js'
 import blogRoutes from './routes/blogRoutes.js'
 import uploadRoutes from './routes/uploadRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
+import serverStatus from './routes/serverStatus.js'
 
 dotenv.config();
 connectDB();
@@ -30,3 +31,4 @@ app.use("/api/accessories", accessoryRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/", serverStatus);
